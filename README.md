@@ -1,2 +1,2 @@
-# TP1-suites
-Générer des suites en informatique
+# TP2-e
+Des suites convergentes vers e
