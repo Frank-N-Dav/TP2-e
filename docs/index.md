@@ -24,7 +24,7 @@ $$u_n = \left(1+\frac{1}{n}\right)^n$$
             return ...
         ```
     3. Enregistrez le fichier puis exécutez le grâce au bouton  <img src="./images/run.png" alt="image" style="vertical-align:middle">
-    4. Générer les dix premiers termes de la suite grâce à la commande `[u(k) for k in range(1, 10)]`
+    4. Générez les dix premiers termes de la suite grâce à la commande `[u(k) for k in range(1, 10)]`
 
 Afin de pouvoir comparer avec la véritable valeur de $e$, on se propose de l'importer.  
 Au début du script, saisissez la ligne :
@@ -37,10 +37,10 @@ from math import e
 
 1. Vérifiez que l'instruction `abs(u(10)-e)` renvoie `0.12453936835904278`.
 
-!!! important
+    !!! important
 
-    L'instruction `abs(u(10)-e)` correspond mathématiquement à la valeur $\left|u_{10}-e\right|$ qui permet de connaître la distance entre
-    le terme $u_{10}$ et la valeur de $e$.
+        L'instruction `abs(u(10)-e)` correspond mathématiquement à la valeur $\left|u_{10}-e\right|$ qui permet de connaître la distance entre
+        le terme $u_{10}$ et la valeur de $e$.
 
 2. L'écart entre le terme $u_{100}$ et $e$ est-il inférieur à $0,001$ ?
 3. Déterminer à partir de quel terme, l'écart entre la suite $u$ et le nombre $e$ est inférieur à $0,001$.
@@ -60,6 +60,7 @@ from math import e
 
         return n
     ```
+
 5. Testez alors l'instruction `seuil(0.0001)`
 
 ### Accélération de la convergence
@@ -82,6 +83,7 @@ $$v_n = u_n - \frac{(u_{n+1}-u_n)^2}{u_n-2u_{n+1}+u_{n+2}}$$
 
         return n
     ```
+    
 3. Vérifiez la meilleure convergence de $v$ par rapport à $u$ en comparant par exemple `seuil(0.0001)` et `seuil2(0.0001)`.
 
 ## Une suite récurrente
