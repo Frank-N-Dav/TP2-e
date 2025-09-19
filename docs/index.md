@@ -26,14 +26,14 @@ $$u_n = \left(1+\frac{1}{n}\right)^n$$
     3. Enregistrez le fichier puis exécutez le grâce au bouton  <img src="./images/run.png" alt="image" style="vertical-align:middle">
     4. Générez les dix premiers termes de la suite grâce à la commande `[u(k) for k in range(1, 10)]`
 
+### Recherche de seuil
+
 Afin de pouvoir comparer avec la véritable valeur de $e$, on se propose de l'importer.  
 Au début du script, saisissez la ligne :
 
 ``` python title="Importation de e" linenums="1"
 from math import e    
 ```
-
-### Recherche de seuil
 
 1. Vérifiez que l'instruction `abs(u(10)-e)` renvoie `0.12453936835904278`.
 
@@ -71,8 +71,9 @@ Avec la suite $u$ définie précédemment par $u_n = \left(1+\frac{1}{n}\right)^
 
 $$v_n = u_n - \frac{(u_{n+1}-u_n)^2}{u_n-2u_{n+1}+u_{n+2}}$$
 
-1. Comparez les termes $u_{100}$ et $v_{100}$ avec le nombre $e$.
-2. Complétez le code de la fonction `seuil2` adaptée à la suite $v$ :
+1. Écrivez une fonction `v` qui permet de générer les termes de la suite $v$.
+2. Comparez les termes $u_{100}$ et $v_{100}$ avec le nombre $e$.
+3. Complétez le code de la fonction `seuil2` adaptée à la suite $v$ :
 
     ``` python title="Recherche de seuil" linenums="1"
     def seuil2(d):
@@ -84,7 +85,7 @@ $$v_n = u_n - \frac{(u_{n+1}-u_n)^2}{u_n-2u_{n+1}+u_{n+2}}$$
         return n
     ```
     
-3. Vérifiez la meilleure convergence de $v$ par rapport à $u$ en comparant par exemple `seuil(0.0001)` et `seuil2(0.0001)`.
+4. Vérifiez la meilleure convergence de $v$ par rapport à $u$ en comparant par exemple `seuil(0.0001)` et `seuil2(0.0001)`.
 
 ## Une suite récurrente
 
